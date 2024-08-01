@@ -1,0 +1,2 @@
+# JavaScriptPractice
+Udemy JS practice
