@@ -15,8 +15,6 @@ const printForecast = function (arr) {
 
 printForecast(data1);
 
-
-
 /*
 Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console.
 Use the problem-solving framework: Understand the problem and break it up into sub-problems!
@@ -37,5 +35,4 @@ TEST DATA 2: [12, 5, -5, 0, 4]
 // - Transform array into string
 // - Transform each element to string with ºC
 // - Strings needs to contain day (index + 1)
-// - Add ... between elements and start and end of string
-// - Log string to console
+// - Add ... between elements and s*/
