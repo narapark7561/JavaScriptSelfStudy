@@ -49,12 +49,12 @@ document.querySelector('.check').addEventListener('click', function () {
     // When player wins
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = 'Corret Number!!💕';
-    score++;
-    document.querySelector('.score').textContent = score;
     document.querySelector('.number').textContent = secretNumber; // If user win, show secret number
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
-    document.querySelector('.highscore').textContent = score;
+    if (score > highscore) {
+      document.querySelector('.highscore').textContent = score;
+    }
 
     // When guess is too high
   } else if (guess > secretNumber) {
