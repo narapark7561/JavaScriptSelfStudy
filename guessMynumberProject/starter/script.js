@@ -25,7 +25,6 @@ console.log(document.querySelector('.guess').value);
 //넘버를 랜덤으로 나오게하는 로직 구현하기
 
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = secretNumber;
 
 let score = 20;
 
@@ -53,6 +52,8 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = 'Corret Number!!💕';
     score++;
     document.querySelector('.score').textContent = score;
+
+    document.querySelector('.number').textContent = secretNumber; // If user win, show secret number
 
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
