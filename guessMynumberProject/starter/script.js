@@ -53,7 +53,12 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     if (score > highscore) {
-      document.querySelector('.highscore').textContent = score;
+      //case 1 -나의 방법: 틀렸다. 이러면 화면에 나오는 최고점수만 변경되는거다.
+      //화면에 표시된 하이스코어만 업데이트되고, 실제 하이스코어 값은 업데이트되지 않습니다.
+      //document.querySelector('.highscore').textContent = score;
+      //case 2
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
     }
 
     // When guess is too high
