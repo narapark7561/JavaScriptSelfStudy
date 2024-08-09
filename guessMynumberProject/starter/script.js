@@ -48,11 +48,13 @@ document.querySelector('.check').addEventListener('click', function () {
 
   // When there is no input or not number input
   if (!guess) {
-    document.querySelector('.message').textContent = 'Need a Number!😒';
+    // document.querySelector('.message').textContent = 'Need a Number!😒';
+    displayMessage('Need a Number!😒');
 
     // When player wins
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = 'Corret Number!!💕';
+    // document.querySelector('.message').textContent = 'Corret Number!!💕';
+    displayMessage('Corret Number!!💕');
     document.querySelector('.number').textContent = secretNumber; // If user win, show secret number
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
@@ -66,8 +68,10 @@ document.querySelector('.check').addEventListener('click', function () {
     } //When guess is wrong
   } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent =
-        guess > secretNumber ? 'Too High!🥶' : 'Too Low!🤖';
+      // document.querySelector('.message').textContent =
+      //   guess > secretNumber ? 'Too High!🥶' : 'Too Low!🤖';
+
+      displayMessage(guess > secretNumber ? 'Too High!🥶' : 'Too Low!🤖');
       //score = score - 1; 같은거임 밑에랑
       score--;
       document.querySelector('.score').textContent = score;
