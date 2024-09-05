@@ -5,3 +5,5 @@ function changeColor(newColor) {
 
 const buttonElement = document.querySelector("#love");
 console.log(buttonElement);
+
+//stud Udemy
