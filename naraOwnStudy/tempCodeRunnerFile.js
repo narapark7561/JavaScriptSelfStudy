@@ -1,1 +1,1 @@
-console.log(restaurant);
+  bookings.push(booking);
