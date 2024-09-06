@@ -34,3 +34,14 @@ const chaiOrder = restaurant.order(1, 1);
 console.log(chaiOrder);
 
 console.log(restaurant.order(0, 0)); //위의것과 같은 방법
+
+//const newMenu = restaurant.mainMenu;
+const newMenu = [...restaurant.mainMenu];
+console.log(newMenu);
+
+//join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.dessertMenu];
+console.log(menu);
+menu.push("pasta");
+console.log(menu);
+console.log(restaurant.mainMenu, restaurant.dessertMenu);
