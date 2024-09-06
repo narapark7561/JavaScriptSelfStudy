@@ -84,3 +84,25 @@ const createReservation = function (
 
 createReservation("Chai", 3);
 createReservation("Mango", 2);
+
+/// How to passing the arguments
+const flight = "WS234";
+const jonas = {
+  name: "Jonas Kim",
+  passport: 464646464,
+};
+
+const checkIn = function (filghtNum, passenger) {
+  filghtNum = "LH999";
+  passenger.name = "Mr. " + passenger.name;
+
+  if (passenger.passport === 464646464) {
+    alert("Checked In!");
+  } else {
+    alert("Wrong passport");
+  }
+};
+
+checkIn(flight, jonas);
+console.log(flight); //WS234
+console.log(jonas);
