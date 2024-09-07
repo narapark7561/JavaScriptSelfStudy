@@ -85,7 +85,7 @@ const createReservation = function (
 createReservation("Chai", 3);
 createReservation("Mango", 2);
 
-/// How to passing the arguments
+/// How to passing the arguments primitive type vs reference types.
 const flight = "WS234";
 const jonas = {
   name: "Jonas Kim",
@@ -106,3 +106,11 @@ const checkIn = function (filghtNum, passenger) {
 checkIn(flight, jonas);
 console.log(flight); //WS234
 console.log(jonas);
+
+/*
+위에 예를 보면, primitive types인 string type → flight는 함수 checkIn을 부를때 안에 있는 “LH999”가 영향을 받지 않는다. 
+→ this means a copy of the flight value (”WS234” is passed to the function.
+
+그렇지만, reference types인 jonas object는 함수 checkIn안에 있는 틀을 가지고 그 안에 내용만 refer된다 
+→ this means the function receives a reference to the jonas object in memory, not a copy of it.
+*/
