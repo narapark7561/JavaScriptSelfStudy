@@ -92,20 +92,20 @@ const jonas = {
   passport: 464646464,
 };
 
-const checkIn = function (filghtNum, passenger) {
-  filghtNum = "LH999";
-  passenger.name = "Mr. " + passenger.name;
+// const checkIn = function (filghtNum, passenger) {
+//   filghtNum = "LH999";
+//   passenger.name = "Mr. " + passenger.name;
 
-  if (passenger.passport === 464646464) {
-    alert("Checked In!");
-  } else {
-    alert("Wrong passport");
-  }
-};
+//   if (passenger.passport === 464646464) {
+//     alert("Checked In!");
+//   } else {
+//     alert("Wrong passport");
+//   }
+// };
 
-checkIn(flight, jonas);
-console.log(flight); //WS234
-console.log(jonas);
+// checkIn(flight, jonas);
+// console.log(flight); //WS234
+// console.log(jonas);
 
 /*
 위에 예를 보면, primitive types인 string type → flight는 함수 checkIn을 부를때 안에 있는 “LH999”가 영향을 받지 않는다. 
@@ -115,12 +115,30 @@ console.log(jonas);
 → this means the function receives a reference to the jonas object in memory, not a copy of it.
 */
 
-//Functions Accepting Callback Functions
-const oneWord = function (str) {
-  return str.replace(/ /g, "").toLowerCase(); /// /g: 이 정규 표현식은 모든 공백 문자를 의미합니다. g -> global 검색을 의미하므로, 문자열의 모든 공백을 찾습니다.
+// //Functions Accepting Callback Functions
+// const oneWord = function (str) {
+//   return str.replace(/ /g, "").toLowerCase(); /// /g: 이 정규 표현식은 모든 공백 문자를 의미합니다. g -> global 검색을 의미하므로, 문자열의 모든 공백을 찾습니다.
+// };
+
+// const upperFirstWord = function (str) {
+//   const [first, ...others] = str.split(" ");
+//   return [first.toUpperCase(), ...others].join(" ");
+// };
+
+// Functions Returning Functions
+const greett = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
 };
 
-const upperFirstWord = function (str) {
-  const [first, ...others] = str.split(" ");
-  return [first.toUpperCase(), ...others].join(" ");
+const greet = (greeting) => {
+  return (name) => {
+    console.log(`${greeting} ${name}`);
+  };
 };
+
+greet("Hello")("Chai!");
+
+const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
+greetArr("Bonjour")("Nara!");
