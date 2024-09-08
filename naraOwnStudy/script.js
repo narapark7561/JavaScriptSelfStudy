@@ -114,3 +114,13 @@ console.log(jonas);
 그렇지만, reference types인 jonas object는 함수 checkIn안에 있는 틀을 가지고 그 안에 내용만 refer된다 
 → this means the function receives a reference to the jonas object in memory, not a copy of it.
 */
+
+//Functions Accepting Callback Functions
+const oneWord = function (str) {
+  return str.replace(/ /g, "").toLowerCase(); /// /g: 이 정규 표현식은 모든 공백 문자를 의미합니다. g -> global 검색을 의미하므로, 문자열의 모든 공백을 찾습니다.
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(" ");
+  return [first.toUpperCase(), ...others].join(" ");
+};
