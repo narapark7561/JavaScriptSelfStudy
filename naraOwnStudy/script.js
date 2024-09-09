@@ -126,19 +126,34 @@ const jonas = {
 // };
 
 // Functions Returning Functions
-const greett = function (greeting) {
-  return function (name) {
-    console.log(`${greeting} ${name}`);
-  };
+// const greett = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+
+// const greet = (greeting) => {
+//   return (name) => {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+
+// greet("Hello")("Chai!");
+
+// const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
+// greetArr("Bonjour")("Nara!");
+
+//the call apply methods
+
+const aircanada = {
+  airline: "Aircanada",
+  code: "AC",
+  bookings: [],
+  book(filghtNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} ${this.code}${filghtNum}`
+    );
+  },
 };
 
-const greet = (greeting) => {
-  return (name) => {
-    console.log(`${greeting} ${name}`);
-  };
-};
-
-greet("Hello")("Chai!");
-
-const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
-greetArr("Bonjour")("Nara!");
+aircanada.book(345, "Nara");
