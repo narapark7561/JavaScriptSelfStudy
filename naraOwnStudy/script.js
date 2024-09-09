@@ -153,7 +153,9 @@ const aircanada = {
     console.log(
       `${name} booked a seat on ${this.airline} ${this.code}${filghtNum}`
     );
+    this.bookings.push({ flight: `${this.code}${filghtNum}, ${name}` });
   },
 };
 
 aircanada.book(345, "Nara");
+console.log(aircanada);
