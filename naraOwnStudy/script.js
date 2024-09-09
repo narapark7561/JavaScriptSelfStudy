@@ -159,3 +159,13 @@ const aircanada = {
 
 aircanada.book(345, "Nara");
 console.log(aircanada);
+
+const westjet = {
+  airline: "Westjet",
+  code: "WS",
+  bookings: [],
+};
+
+const book = aircanada.book;
+book.call(westjet, 23, "Chai Park");
+console.log(westjet);
