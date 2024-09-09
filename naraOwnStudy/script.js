@@ -168,4 +168,20 @@ const westjet = {
 
 const book = aircanada.book;
 book.call(westjet, 23, "Chai Park");
-console.log(westjet);
+book.call(aircanada, 7, "Jordan Kim");
+
+console.log(aircanada.bookings); // [{ flight: "AC345, Nara" }, { flight: "AC7, Jordan Kim" }]
+console.log(westjet.bookings); // [{ flight: "WS23, Chai Park" }]
+
+const swiss = {
+  airline: "Flair Airline",
+  code: "SW",
+  bookings: [],
+};
+//Apply method
+const flightData = [583, "George Cooper"];
+book.apply(swiss, flightData);
+console.log(swiss);
+// console.log(swiss.bookings);
+
+book.call(swiss, ...flightData); //Spread Operator
