@@ -185,3 +185,14 @@ console.log(swiss);
 // console.log(swiss.bookings);
 
 book.call(swiss, ...flightData); //Spread Operator
+
+//bind method
+const bookWithSwiss = book.bind(swiss);
+bookWithSwiss(23, "Carrie");
+console.log(swiss.bookings);
+
+// Partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200));
+
+const addVAT = addTax.bind(null, 0.23);
