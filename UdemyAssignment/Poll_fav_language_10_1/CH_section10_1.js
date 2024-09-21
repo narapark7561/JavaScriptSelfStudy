@@ -44,7 +44,7 @@ const poll = {
   question: "What is your favourite programming language?",
   options: ["0: JavaScript", "1: Python", "2: Rust", "3: C++"],
   // This generates [0, 0, 0, 0]. More in the next section 😃
-  answers: new Array(4).fill(0),
+  answers: new Array(4).fill(0), //4칸이있는 array를 생성한뒤 각각 [0,0,0,0]으로하는것이다.
   registerNewAnswer(answer) {
     // answer = prompt(
     //   `${this.question}\n${this.options.join('\n')}\nWrite option number`
@@ -70,7 +70,9 @@ const poll = {
   //   }, //displayResult에서 어떤 타입의 answer인지보여줘야한다. //나의 answer
 
   displayResult(type = "array") {
+    //default parameter
     if (type === "array") {
+      //즉 유저가 보고싶은 아웃풋을 선택하는 꼴이됨.
       console.log(this.answers);
     } else if (type === "string") {
       console.log(`Poll results are ${this.answers.join(", ")}`); //answer sample 1
