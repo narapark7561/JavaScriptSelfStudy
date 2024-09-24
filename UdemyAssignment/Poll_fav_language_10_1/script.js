@@ -80,5 +80,6 @@ const poll = {
   },
 };
 
-//will do review again tomorrow and try one more time.
-//will review
+document
+  .querySelector(".poll")
+  .addEventListener("click", poll.registerNewAnswer.bind(poll));
