@@ -246,3 +246,14 @@
 (nara = () => {
   console.log("nara can do it 10000%");
 })();
+
+let f;
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+  return f();
+};
+
+g();
