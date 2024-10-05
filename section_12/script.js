@@ -268,3 +268,35 @@ console.log(Number.isFinite(20)); //true
 console.log(Number.isFinite('20')); //false
 
 console.log(Number.isInteger(23));
+
+// Math and Rounding
+console.log(Math.sqrt(25)); //제곱근을 구해주는 함수
+console.log(25 ** (1 / 2)); // 같은방법이나 수학식이다 둘다 5를 리턴한다.
+console.log(8 ** (1 / 3)); // 2리턴
+
+console.log(Math.trunc(Math.random() * 6) + 1); //무작위 소스세 6을 곱한다. 이렇게되면 0이상 6미만값을생성한다.
+
+const randomInt = (min, max) =>
+  Math.trunc(Math.random() * (max - min) + 1) + min;
+
+// Rounding integers
+console.log('Rounding Integers');
+console.log(Math.trunc(23.3)); // return 23 kinda all round down
+
+console.log(Math.round(23.3)); // return 23
+console.log(Math.round(23.8)); // return 24
+
+console.log(Math.ceil(23.3)); //return 24
+console.log(Math.ceil(23.8)); //return 24 all round up
+
+console.log(Math.floor(-23.8)); //Math.floor()는 숫자를 내림해 정수로 만들어주는 함수.
+console.log(Math.floor(5.7)); // 결과: 5
+console.log(Math.floor(5.2)); // 결과: 5
+console.log(Math.floor(-23.8)); // 결과: -24
+console.log(Math.floor(-23.1)); // 결과: -24
+
+let num = 23.45678;
+
+console.log(num.toFixed(2)); // "23.46" (소수점 이하 2자리)
+console.log(num.toFixed(0)); // "23" (소수점 이하 0자리, 반올림됨)
+console.log(num.toFixed(5)); // "23.45678" (소수점 이하 5자리)
