@@ -300,3 +300,6 @@ let num = 23.45678;
 console.log(num.toFixed(2)); // "23.46" (소수점 이하 2자리)
 console.log(num.toFixed(0)); // "23" (소수점 이하 0자리, 반올림됨)
 console.log(num.toFixed(5)); // "23.45678" (소수점 이하 5자리)
+
+// Remainder Operator
+console.log(5 % 2); // return 1
