@@ -1,5 +1,3 @@
-"use strict";
-
 // Objects
 // one of the JavaScript's data types.
 // a collection of related data and/or functionality.
@@ -83,3 +81,20 @@ console.log(person6);
 // 5. in operator: property excistence check (key in obj)
 console.log("name" in ellie); // true
 console.log("birthday" in ellie); // false
+
+// 6. for..in vs for..of
+// for (key in obj)
+console.clear(); //위의 로그들을 다 clear하는것
+for (key in ellie) {
+  console.log(key);
+}
+//Output
+// name
+// age
+// hadJob
+
+// for (value of iterable)
+const array = [1, 2, 4, 5];
+for (value of array) {
+  console.log(value);
+} // 1 2 4 5 가 output
