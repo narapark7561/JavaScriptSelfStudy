@@ -68,3 +68,14 @@ function makePerson(name, age) {
   };
 }
 console.log(person5);
+
+// 4. Consturctor Function
+// Now that JavaScript supports classes (introduced in ES6),
+// using classes is generally a more modern and readable way to create objects.
+function Person(name, age) {
+  // 'this'는 새로 생성된 객체를 가리킴
+  this.name = name; // this.name은 새 객체의 'name' 속성
+  this.age = age; // this.age도 새 객체의 'age' 속성
+}
+const person6 = new Person("Mango", 6);
+console.log(person6);
