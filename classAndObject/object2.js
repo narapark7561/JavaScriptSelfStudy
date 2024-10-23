@@ -79,3 +79,7 @@ function Person(name, age) {
 }
 const person6 = new Person("Mango", 6);
 console.log(person6);
+
+// 5. in operator: property excistence check (key in obj)
+console.log("name" in ellie); // true
+console.log("birthday" in ellie); // false
