@@ -42,3 +42,29 @@ function printValue(obj, key) {
 
 printValue(ellie, "name"); //Ellie Kim
 printValue(ellie, "age"); // 17
+
+// 3. Property value shorthand
+const person1 = { name: "Bob", age: 3 };
+const person2 = { name: "Steve", age: 15 };
+const person3 = { name: "Dave", age: 13 };
+
+// if you want to make person 4?
+// you can do manually but, it's better to do like below
+const person4 = makePerson("Nara", 23);
+function makePerson(name, age) {
+  return {
+    name: name,
+    age: age,
+  };
+}
+console.log(person4);
+
+// But in JavaScript, if the key name is the same as the parameter name, you can omit it.
+const person5 = makePerson("Chai", 4);
+function makePerson(name, age) {
+  return {
+    name,
+    age,
+  };
+}
+console.log(person5);
