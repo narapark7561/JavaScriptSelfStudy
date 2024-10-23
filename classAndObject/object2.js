@@ -98,3 +98,37 @@ const array = [1, 2, 4, 5];
 for (value of array) {
   console.log(value);
 } // 1 2 4 5 가 output
+
+// 7. Fun cloning
+const user = { name: "Chai", age: "4" };
+const user2 = user;
+user2.name = "Coder";
+console.log(user); // { name: 'Coder', age: '4' }
+// user 1의 이름이 바뀐 이유는 무엇일까?
+// user2 = user로 할당하면 user와 user2는 동일한 객체를 가리키는
+// 동일한 참조(reference)를 공유하게 된다.
+// 그래서 user2의 name을 변경하면, 같은 객체를 참조하고 있는 user의 name도 함께 바뀌게 된다.
+
+// old way
+const user3 = {};
+for (key in user) {
+  user3[key] = user[key];
+}
+console.log(user3); // { name: 'Coder', age: '4' }
+
+// new way
+const user4 = {};
+Object.assign(user4, user);
+//or
+const user5 = Object.assign({}, user);
+console.log(user4); // { name: 'Coder', age: '4' }
+console.log(user5); // { name: 'Coder', age: '4' }
+
+// Object.assign()을 사용할 때 주의할 점:
+// 여러 객체를 섞을 때, 같은 키를 가진 속성은 맨 마지막에 있는 객체의 값이 앞의 값을 덮어씌운다.
+// example
+const fruit1 = { color: red };
+const fruit2 = { color: blue, size: big };
+const mixed = Object.assign({}, fruit1, fruit2);
+console.log(mixed.color); // blue
+console.log(mixed.size); // big
